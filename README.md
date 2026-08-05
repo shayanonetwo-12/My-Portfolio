@@ -345,27 +345,9 @@ npm run typecheck
 
 ---
 
-# 🎬 RECOMMENDED DEMO GIF
+# 🎬DEMO
 
-For the most impressive GitHub presentation, add a short GIF showing:
-
-```text
-Landing Page
-      ↓
-Scroll Animation
-      ↓
-About Section
-      ↓
-Skills
-      ↓
-Project Cards
-      ↓
-Project Interaction
-      ↓
-Contact
-```
-
-A **10–20 second cinematic screen recording** would make the README dramatically more visually impressive.
+https://github.com/user-attachments/assets/8d958ece-f4ee-4e58-918e-80457e74f3f9
 
 ---
 
