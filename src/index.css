@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --carbon-0: #050505;
+    --carbon-1: #080a08;
+    --carbon-2: #0d0f0d;
+    --carbon-3: #111411;
+    --carbon-4: #171a17;
+    --carbon-5: #202420;
+    --lime: #b6ff00;
+    --lime-bright: #c6ff00;
+    --soft: #a7ada7;
+    --dark-grey: #626862;
+    --white: #f5f5f5;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--carbon-0);
+  }
+
+  body {
+    background-color: var(--carbon-0);
+    color: var(--white);
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  ::selection {
+    background: var(--lime);
+    color: #000;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--carbon-1);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--carbon-5);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--lime);
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  /* Hide native cursor on desktop with custom cursor */
+  @media (hover: hover) and (pointer: fine) {
+    body.custom-cursor-active,
+    body.custom-cursor-active * {
+      cursor: none !important;
+    }
+  }
+}
+
+@layer components {
+  .micro-label {
+    @apply text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-medium;
+    color: var(--soft);
+  }
+
+  .lime-text {
+    color: var(--lime);
+  }
+
+  .carbon-panel {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.025) 0%, rgba(255,255,255,0) 100%),
+      var(--carbon-3);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 18px;
+  }
+
+  .carbon-fiber {
+    background-color: var(--carbon-3);
+    background-image:
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.018) 0px, rgba(255,255,255,0.018) 1px, transparent 1px, transparent 3px),
+      repeating-linear-gradient(-45deg, rgba(0,0,0,0.18) 0px, rgba(0,0,0,0.18) 1px, transparent 1px, transparent 3px);
+  }
+
+  .glass {
+    background: rgba(17, 20, 17, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .lime-border {
+    border: 1px solid var(--lime);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold uppercase tracking-wider transition-all duration-300 rounded-full;
+    background: var(--lime);
+    color: #000;
+    border: 1px solid var(--lime);
+  }
+  .btn-primary:hover {
+    background: var(--lime-bright);
+    box-shadow: 0 0 30px rgba(182,255,0,0.35);
+    transform: translateY(-1px);
+  }
+  .btn-primary:active {
+    transform: scale(0.97);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold uppercase tracking-wider transition-all duration-300 rounded-full;
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.18);
+  }
+  .btn-ghost:hover {
+    border-color: var(--lime);
+    color: var(--lime);
+    background: rgba(182,255,0,0.04);
+    transform: translateY(-1px);
+  }
+  .btn-ghost:active {
+    transform: scale(0.97);
+  }
+
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute left-0 -bottom-0.5 h-px w-0 transition-all duration-300;
+    background: var(--lime);
+  }
+  .link-underline:hover::after {
+    width: 100%;
+  }
+
+  .section-pad {
+    @apply px-5 sm:px-8 lg:px-16 xl:px-24;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(182,255,0,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(182,255,0,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .scan-line {
+    position: relative;
+    overflow: hidden;
+  }
+  .scan-line::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(182,255,0,0.08) 50%, transparent 100%);
+    transform: translateY(-100%);
+    transition: transform 0.6s ease;
+  }
+  .scan-line:hover::after {
+    transform: translateY(100%);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 24px rgba(182,255,0,0.25);
+  }
+}
+
+@layer utilities {
+  .perspective {
+    perspective: 1200px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  @keyframes pulse-lime {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(182,255,0,0.5); }
+    50% { box-shadow: 0 0 0 6px rgba(182,255,0,0); }
+  }
+  .pulse-lime {
+    animation: pulse-lime 2s infinite;
+  }
+
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  .float-y {
+    animation: float-y 6s ease-in-out infinite;
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .spin-slow {
+    animation: spin-slow 24s linear infinite;
+  }
+  .spin-slow-rev {
+    animation: spin-slow 32s linear infinite reverse;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(182,255,0,0.15), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s infinite;
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .float-y, .spin-slow, .spin-slow-rev, .pulse-lime, .shimmer {
+    animation: none !important;
+  }
+}
