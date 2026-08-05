@@ -315,33 +315,31 @@ npm run typecheck
 
 ### 🪐 HERO EXPERIENCE
 
-> Replace this section with a screenshot or GIF of your portfolio hero section.
-
-`[ HERO SCREENSHOT / GIF ]`
+<img width="958" height="435" alt="Screenshot 2026-08-05 131331" src="https://github.com/user-attachments/assets/be448d65-306a-4c3a-94f8-bbeaa1724f99" />
 
 ---
 
 ### 👤 ABOUT
 
-`[ ABOUT SECTION SCREENSHOT ]`
+<img width="960" height="433" alt="Screenshot 2026-08-05 131414" src="https://github.com/user-attachments/assets/58f40868-0d21-4f64-b9d6-c424e1f69890" />
 
 ---
 
 ### 🚀 PROJECT SHOWCASE
 
-`[ PROJECTS SCREENSHOT ]`
+<img width="960" height="436" alt="Screenshot 2026-08-05 131452" src="https://github.com/user-attachments/assets/9eee1d5c-3b33-402e-adca-0b35c08321db" />
 
 ---
 
 ### 🧠 SKILLS
 
-`[ SKILLS SECTION SCREENSHOT ]`
+<img width="960" height="436" alt="Screenshot 2026-08-05 131523" src="https://github.com/user-attachments/assets/9f09ead6-f338-486c-ace1-526743e96652" />
 
 ---
 
 ### 📬 CONTACT
 
-`[ CONTACT SECTION SCREENSHOT ]`
+<img width="960" height="436" alt="Screenshot 2026-08-05 131608" src="https://github.com/user-attachments/assets/9401f52d-a5e1-4852-89eb-ba4d54900d5e" />
 
 </div>
 
